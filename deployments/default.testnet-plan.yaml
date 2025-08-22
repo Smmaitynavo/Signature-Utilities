@@ -1,0 +1,18 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: SignatureUtilities
+            expected-sender: ST23X1MH2V5DPS3NXP6PSP0366GPBB0ZVQQQCET1J
+            cost: 33960
+            path: "contracts\\SignatureUtilities.clar"
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.2"
